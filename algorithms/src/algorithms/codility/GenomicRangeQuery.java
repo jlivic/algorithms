@@ -1,6 +1,20 @@
 package algorithms.codility;
 
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
 public class GenomicRangeQuery {
+	
+	@Test
+	public void testGenomicRangeQuerySolution() {
+		
+		String A = "CAGCCTA";
+		int[] P = {2, 5, 0};
+		int[] Q = {4, 5, 6};
+		int[] solution = {2, 4, 1};
+		assertEquals(GenomicRangeQuery.solution(A, P, Q), solution);
+	}
 	
 	/**
 	 * 

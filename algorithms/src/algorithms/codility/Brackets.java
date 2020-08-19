@@ -22,30 +22,28 @@ public class Brackets {
 		for (int i = 0; i < S.length(); i++) {
 
 			char curr = S.charAt(i);
-			if(isOpeningBracket(curr)) {
+			if (isOpeningBracket(curr)) {
 				stack.push(curr);
-			}else {
-				
-				if(stack.size() == 0) {
+			} else {
+
+				if (stack.size() == 0) {
 					return 0;
 				}
-				
+
 				char poped = stack.pop();
-				if(isBracketMatch(poped, curr)) {
+				if (isBracketMatch(poped, curr)) {
 					continue;
-				}else {
+				} else {
 					return 0;
 				}
-				
+
 			}
-			
-			
-			
+
 		}
 
-		if(stack.isEmpty())
+		if (stack.isEmpty())
 			return 1;
-		
+
 		return 0;
 	}
 

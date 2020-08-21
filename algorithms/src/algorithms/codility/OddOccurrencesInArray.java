@@ -1,15 +1,26 @@
 package algorithms.codility;
 
-import java.util.Arrays;
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
 
 public class OddOccurrencesInArray {
 
-	public static int solution(int[] A) {
-		int result = 0;
-		for (int i = 0; i < A.length; i++) {
-			result ^= A[i];
+	@Test
+	public void testOddOccurrencesInArraySolution() {
 
+		int[] A = { 9, 3, 9, 3, 9, 7, 9 };
+		assertEquals(7, OddOccurrencesInArray.solution(A));
+	}
+
+	public static int solution(int[] A) {
+
+		int oddOc = 0;
+		for (int i = 0; i < A.length; i++) {
+			oddOc ^= A[i];
 		}
-		return result;
+
+		return oddOc;
+
 	}
 }
